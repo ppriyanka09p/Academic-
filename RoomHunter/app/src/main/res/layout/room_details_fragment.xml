@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/room_detail_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".RoomDetails"
+    android:nestedScrollingEnabled="false"
+    android:outlineProvider="none"
+    android:scrollIndicators="none"
+    android:touchscreenBlocksFocus="false"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        android:verticalScrollbarPosition="defaultPosition"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Price &amp; Availability"
+            android:id="@+id/price_avail_label"
+            android:layout_gravity="center"
+            android:textColor="#cd747474"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/rent_amount_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Rent Amount"
+                    android:paddingBottom="5dp"
+                    android:layout_gravity="center|left"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:background="@drawable/border"
+                android:layout_marginBottom="25dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/monthly_rent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Monthly Rent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_margin="10dp" />
+
+                    <EditText
+                        android:id="@+id/monthly_rent_edit_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:textColor="#000000"
+                        android:gravity="right"
+                        android:background="@null"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:id="@+id/dollar_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:hint="$"
+                        android:layout_marginTop="10dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/deposit_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" Deposit"
+                        android:layout_marginTop="10dp"/>
+
+                    <EditText
+                        android:id="@+id/deposit_edit_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:hint="0"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"/>
+
+                    <TextView
+                        android:id="@+id/deposit_dollar_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:hint="$"
+                        android:layout_marginTop="10dp"
+                         />
+                </LinearLayout>
+
+            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Is Rent Inclusive of Bills"
+                    android:paddingBottom="5dp"
+                    android:layout_gravity="center|left"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/border"
+                    android:paddingBottom="10dp"
+                    android:weightSum="1"
+                    android:layout_gravity="center_horizontal">
+
+                    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes"
+                            android:textColor="#666666"/>
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No"
+                            android:textColor="#666666"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Available?"
+                    android:paddingBottom="5dp"
+                    android:layout_gravity="center|left"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:background="@drawable/border"
+                android:weightSum="1"
+                android:layout_marginBottom="25dp">
+
+                <TextView
+                    android:id="@+id/from_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="From Date"
+                    android:layout_margin="10dp"
+                    android:lines="1"/>
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:ems="10"
+                    android:hint="20/03/2019"
+                    android:textColor="#000000"
+                    android:gravity="right"
+                    android:background="@null"
+                    android:layout_margin="10dp"
+                    android:fitsSystemWindows="false"
+                    android:paddingRight="5dp"
+                    android:textSize="17sp"/>
+
+            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Enter Description"
+                    android:layout_gravity="center|left"/>
+
+                <EditText
+                    android:id="@+id/description_editText5"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:ems="10"
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:textColor="#000000"
+                    android:textColorHint="#b8a5a5a5"
+                    android:textStyle="italic"
+                    android:hint="Brief about your space.Why is it different than others?"
+                    android:gravity="left"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/step2_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            app:backgroundTint="@color/colorPrimary"
+            app:srcCompat="@mipmap/ic_done_white_48dp" />
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>

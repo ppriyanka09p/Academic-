@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:elevation="100dp"
+    card_view:cardCornerRadius="8dp"
+    android:layout_alignParentTop="true"
+    android:layout_margin="@dimen/cardview_default_radius"
+    android:paddingBottom="10dp"
+    android:layout_marginBottom="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="268dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/room_image"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="First Image"
+            android:scaleType="center" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:background="#cd4a4a4a"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/price_sign_label"
+                android:layout_gravity="bottom"
+                android:text="$"
+                android:textColor="#ffffff"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/price_label"
+                android:layout_gravity="bottom"
+                android:textColor="#ffffff"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/price_sign_label"
+                android:layout_toEndOf="@+id/price_sign_label"
+                android:textSize="24sp"
+                android:textColorHint="#ffffff"
+                android:hint="200"
+                android:layout_marginLeft="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/location_label"
+                android:textColor="#eaeaea"
+                android:textAlignment="viewEnd"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:hint="Not Set"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/num_beds_label"
+                android:layout_width="19dp"
+                android:layout_height="22dp"
+                android:layout_alignStart="@+id/price_sign_label"
+                android:layout_alignLeft="@+id/price_sign_label"
+                android:layout_alignTop="@+id/location_imageview"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="-3dp"
+                android:hint="0"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textColorHint="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/beds_imageview"
+                android:layout_width="28dp"
+                android:layout_height="32dp"
+                android:layout_alignTop="@+id/num_beds_label"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="-6dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toRightOf="@+id/num_beds_label"
+                android:cropToPadding="false"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_local_hotel_white_48dp" />
+
+            <TextView
+                android:id="@+id/details_num_baths_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/incl_excl_label"
+                android:layout_alignLeft="@+id/incl_excl_label"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:hint="0"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textColorHint="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/baths_imageview"
+                android:src="@mipmap/ic_bath_48dp"
+                android:layout_alignTop="@+id/details_num_baths_label"
+                android:layout_alignBottom="@+id/details_num_baths_label"
+                android:scaleType="centerInside"
+                android:layout_toRightOf="@+id/details_num_baths_label"
+                android:layout_toEndOf="@+id/details_num_baths_label" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/propertyType_label"
+                android:textColor="#f5f5f5"
+                android:textAlignment="viewEnd"
+                android:textColorHint="#fff"
+                android:layout_alignBottom="@+id/price_label"
+                android:layout_alignRight="@+id/location_label"
+                android:layout_alignEnd="@+id/location_label" />
+
+            <ImageView
+                android:id="@+id/location_imageview"
+                android:layout_width="36dp"
+                android:layout_height="19dp"
+                android:layout_alignTop="@+id/location_label"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@+id/location_label"
+                android:adjustViewBounds="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_baseline_place_24px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/incl_excl_label"
+                android:layout_gravity="bottom"
+                android:textColor="#d0ffffff"
+                android:textSize="17sp"
+                android:textColorHint="#d0ffffff"
+                android:layout_alignBaseline="@+id/price_label"
+                android:layout_alignBottom="@+id/price_label"
+                android:layout_toRightOf="@+id/price_label"
+                android:layout_toEndOf="@+id/price_label"
+                android:layout_marginLeft="7dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</android.support.v7.widget.CardView>

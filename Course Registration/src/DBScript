@@ -1,0 +1,77 @@
+create table role(
+roleId varchar2(5)primary key,
+Rolename varchar2(20)
+);
+
+__________________________________________________________
+
+create table users(
+userId varchar2(5) primary key,
+username varchar2(20),
+Password varchar2(20),
+roleId varchar2(5) references role(roleId)
+);
+
+___________________________________________________________
+
+create table Dept(
+deptId varchar2(5) primary key,
+deptname varchar2(20)
+);
+
+____________________________________________________________
+
+create table Professor(
+profId varchar2(5) primary key,
+profname varchar2(20),
+Deptid varchar2(5)references Dept(deptid)
+);
+
+_____________________________________________________________
+
+
+create table Course(
+courseId varchar2(5) primary key,
+coursename varchar2(20),
+profid varchar2(5)references Professor(profId)
+);
+
+______________________________________________________________
+
+
+create table Student(
+studId varchar2(5) primary key,
+studname varchar2(20),
+addressid varchar2(50),
+Dob Date,
+Degree varchar2(20)
+);
+
+_________________________________________________________________
+
+
+create table Stud_course(studId varchar2(5)references Student(StudId),courseId varchar2(5)
+references Course(courseId),preference varchar2(5),
+constraint pk_studid primary key(studId,courseId));
+
+____________________________________________________________________
+
+ADMIN:
+
+USERNAME=UA01
+PASSWORD= password
+
+
+
+student:
+
+username=U01
+password= 123
+
+username=U02
+password=1234
+
+username=U03
+password=12345
+
+
